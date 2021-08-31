@@ -1,15 +1,6 @@
-body{
-
-}
 
 .App {
-  
   color: azure;
-
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,20 +8,18 @@ body{
   width: 100%;
   text-align: center;
   margin: 2% 0;
-
-  
 }
 
-ul{
-  list-style-type:none; 
+ul {
+  list-style-type: none;
   padding-left: 1rem;
 }
 
-.rm{
+.rm {
   margin-right: 1rem;
 }
 
-.TodoList{
+.TodoList {
   max-width: 1000px;
   min-width: 200px;
 }
