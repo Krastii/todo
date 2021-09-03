@@ -5,10 +5,11 @@ import { removeHistory } from "./store/todoSlice";
 import { Stack } from "@material-ui/core";
 
 function HistoriList() {
-  const historyList = useSelector((state) => state.todos.historyToDos);
+  const historyList = useSelector((state) => state.todos.historyToDos); //подключаем список истории дел из store
   const dispatch = useDispatch();
-  const removeHistoryTask = (id) => dispatch(removeHistory(id));
+  const removeHistoryTask = (id) => dispatch(removeHistory(id)); // подключаем действие удаление из истории
   if (historyList.length) {
+    //проверка на наличие истории
     return (
       <Stack spacing={1}>
         {historyList.map((item, index) => (
@@ -27,6 +28,7 @@ function HistoriList() {
 }
 
 function HistoryBlock({ checkHistory }) {
+  //в зависимости от значения выводил либо ничиге либо список с историей дел
   if (checkHistory) {
     return <HistoriList />;
   } else {
@@ -35,7 +37,8 @@ function HistoryBlock({ checkHistory }) {
 }
 
 function HistoriDo() {
-  const [checkHistory, setCheckHistory] = useState(false);
+  //выводит кнопку для показа истории
+  const [checkHistory, setCheckHistory] = useState(false); // запоминание значения для кнопки
   return (
     <div>
       <button

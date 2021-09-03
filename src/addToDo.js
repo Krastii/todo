@@ -4,12 +4,12 @@ import { addTodo } from "./store/todoSlice";
 import { TextField, Button } from "@material-ui/core";
 
 function AddToDo() {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(""); // запоминание вводимого поля
   const dispatch = useDispatch();
-  const addTask = (text) => dispatch(addTodo(text));
+  const addTask = (text) => dispatch(addTodo(text)); // добавляем действие из redux
   function addValue(event) {
+    //отменяем стандартное действие на кнопке, добавляем действие в store и  очищаем пол ввода
     event.preventDefault();
-
     if (value !== "") {
       addTask(value);
       setValue("");

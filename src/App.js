@@ -1,9 +1,9 @@
 import react, { Suspense } from "react";
 import "./App.css";
-import AddToDo from "./addToDo";
+import AddToDo from "./addToDo"; //компонент с формой для добавления дел
 
-const HistoriDo = react.lazy(() => import("./history"));
-const TodoList = react.lazy(() => import("./TodoList"));
+const TodoList = react.lazy(() => import("./TodoList")); //подключение компонента со списком дел
+const HistoriDo = react.lazy(() => import("./history")); //подключение компонента с историей дел
 
 function App() {
   return (

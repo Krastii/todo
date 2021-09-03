@@ -6,10 +6,11 @@ import { removeTodo } from "./store/todoSlice";
 
 function TodoList() {
   const dispatch = useDispatch();
-  const removeTask = (id) => dispatch(removeTodo(id));
-  const todolist = useSelector((state) => state.todos.todos);
+  const removeTask = (id) => dispatch(removeTodo(id)); // удаление дела
+  const todolist = useSelector((state) => state.todos.todos); // подключаем список из store
 
   return (
+    //выводит список дел
     <div className='TodoList'>
       <Stack spacing={1}>
         {todolist.map((item, index) => {
